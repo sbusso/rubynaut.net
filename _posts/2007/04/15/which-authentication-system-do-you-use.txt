@@ -1,0 +1,16 @@
+--- 
+title: Which authentication system do you use?
+tags: 
+- authentication
+- survey
+- rails
+filter: 
+- textile
+blog_post: true
+created_at: 2007-04-15 17:56:00 +02:00
+---
+To celebrate my new poll sidebar, I would like to ask everybody which authentication system do you use for your projects? 
+
+Please feel free to comment your answer :)
+
+"survey":http://www.rubynaut.net on the right side =>

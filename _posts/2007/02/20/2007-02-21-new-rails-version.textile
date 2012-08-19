@@ -1,0 +1,12 @@
+---
+title: New Rails version...
+tags:
+- rails
+layout: post
+---
+
+{% include JB/setup %}
+
+I know it s a bit late, but the version 1.2 of Ruby On Rails has finally got out on 18th of january.
+
+Have look <a href="http://www.rubyonrails.org/down">here...</a>

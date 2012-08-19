@@ -1,0 +1,11 @@
+---
+title: Migrate comments to disqus
+tags:
+- disqus
+- typo
+layout: post
+---
+
+{% include JB/setup %}
+
+

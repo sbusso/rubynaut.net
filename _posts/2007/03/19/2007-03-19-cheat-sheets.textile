@@ -1,0 +1,26 @@
+---
+title: All cheats you ever want to have
+tags:
+- cheat
+- sheet
+layout: post
+---
+
+{% include JB/setup %}
+
+Find on: http://cheat.errtheblog.com/. All ruby's cheat sheets you ever want, are centralized on this website and dispatched via wiki pages.
+
+Simple, useful, just do :
+
+<pre>
+# installation
+$ sudo gem install cheat
+
+# list of the commands
+$ cheat cheat
+
+# all the sheets available
+$ cheat sheets
+</pre>
+
+Enjoy!

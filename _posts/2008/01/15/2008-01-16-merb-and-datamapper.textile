@@ -1,0 +1,11 @@
+---
+title: Merb and Datamapper
+tags: []
+layout: post
+---
+
+{% include JB/setup %}
+
+$ PATH=/usr/local/mysql/bin:$PATH sudo gem install do_mysql 
+
+sudo gem install do_postgres -- --with-pgsql-dir=/Library/PostgreSQL8/

@@ -1,0 +1,14 @@
+--- 
+title: New Ruby website
+tags: 
+- ruby
+- radiant
+- cms
+filter: 
+- textile
+blog_post: true
+created_at: 2006-09-12 22:51:00 +02:00
+---
+For those who haven't seen yet, the new ruby-lang website is out. Working on it for long time, the members of the community did a great job with this new design and use Radiant CMS to power it.
+
+Please find it and the latest 1.8.5 version of ruby on the website : <a href="http://www.ruby-lang.org/en/">http://www.ruby-lang.org/en/</a>
