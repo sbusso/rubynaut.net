@@ -1,0 +1,9 @@
+---
+title:      Redis installation on OSX and ubuntu
+layout: post
+category : lessons
+tags : [redis,osx,ubuntu]
+---
+{% include JB/setup %}
+
+Here is a summary of the installation of Redis as a service on OSX and ubuntu.
