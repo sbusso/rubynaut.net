@@ -8,7 +8,7 @@
 
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
-    
+
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/styles.css">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/pygment_trac.css">
 
@@ -22,6 +22,7 @@
       <header class="main">
         <hgroup>
           <h1><a href="/">{{ site.title }}</a></h1>
+          <img src="/images/bwavatar.jpg" alt="Stéphane Busso"/>
           {% if site.tagline %}
           <h2>{{ site.tagline }}</h2>
           {% endif %}
@@ -31,6 +32,7 @@
           <li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me">Connect <strong>LinkedIn</strong></a></li>
           <li><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">Follow <strong>Twitter</strong></a></li>
         </ul>
+        <p><strong>Available for remote work</strong>. Rails developer since early versions. Programming addict since school. Wide range of technical kills and business oriented. I will bring you more than just coding. I'm solution finder and implied in your projects.</p>
       </header>
       <section class="main">
         {{ content }}
@@ -49,7 +51,9 @@
       </aside>
       <footer class="main">
         <p>
-          <small>Themed with <a href="http://sdb.github.com/jb-theme-ghminimal/">ghminimal</a> based on <a href="http://github.com/orderedlist/minimal/">minimal</a>. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://pages.github.com/">GitHub Pages</a>.</small>
+          <small>Themed with <a href="http://sdb.github.com/jb-theme-ghminimal/">ghminimal</a> based on <a href="http://github.com/orderedlist/minimal/">minimal</a>.</small>
+            <br/>
+            <small>Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://pages.github.com/">GitHub Pages</a>.</small>
         </p>
       </footer>
     </div>
