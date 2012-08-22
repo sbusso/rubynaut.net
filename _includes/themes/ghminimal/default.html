@@ -21,18 +21,25 @@
     <div class="wrapper">
       <header class="main">
         <hgroup>
-          <h1><a href="/">{{ site.title }}</a></h1>
-          <img src="/images/bwavatar.jpg" alt="Stéphane Busso"/>
+
+          <h1>
+            <a href="/">
+              <img class="avatar" src="http://www.gravatar.com/avatar/4db25e36d95dc0d07830cdc91bbb87e3?s=32" alt="Stéphane Busso"/>
+              {{ site.title }}
+            </a>
+          </h1>
+
           {% if site.tagline %}
-          <h2>{{ site.tagline }}</h2>
+            <h2>{{ site.tagline }}</h2>
           {% endif %}
+
+
+
         </hgroup>
-        <ul class="buttons">
-          <li><a href="http://github.com/{{ site.author.github }}/" rel="me">Code <strong>GitHub</strong></a></li>
-          <li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me">Connect <strong>LinkedIn</strong></a></li>
-          <li><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">Follow <strong>Twitter</strong></a></li>
-        </ul>
-        <p><strong>Available for remote work</strong>. Rails developer since early versions. Programming addict since school. Wide range of technical kills and business oriented. I will bring you more than just coding. I'm solution finder and implied in your projects.</p>
+        {% include buttons %}
+        {% include intro %}
+
+
       </header>
       <section class="main">
         {{ content }}
