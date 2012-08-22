@@ -3,6 +3,6 @@
           <li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me" class="social linkedin"></a></li>
           <li><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me" class="social twitter"></a></li>
           <li><a href="/atom.xml" rel="me" class="social rss"></a></li>
-          <li><a href="https://plus.google.com/u/0/116481333357929810097/posts" rel="me" class="social gplus"></a></li>
+          <!-- <li><a href="https://plus.google.com/u/0/116481333357929810097/posts" rel="me" class="social gplus"></a></li> -->
           <li><a href="mailto:stephane.busso@gmail.com" rel="me" class="social mail"></a></li>
         </ul>
