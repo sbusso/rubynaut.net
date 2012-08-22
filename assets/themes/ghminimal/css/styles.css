@@ -123,6 +123,7 @@ header.main h2 {
 
 header.main ul.buttons {
   height:44px;
+  padding-left: 0px;
 
 /*  list-style:none;
   height:40px;
@@ -432,6 +433,22 @@ a.social.rss {
 
 a.social.rss:hover {
   background: url(/images/social_icons.png) -34px -34px no-repeat;
+}
+
+a.social.mail {
+  background: url(/images/social_icons.png) -136px 0px no-repeat;
+}
+
+a.social.mail:hover {
+  background: url(/images/social_icons.png) -136px -34px no-repeat;
+}
+
+a.social.gplus {
+  background: url(/images/social_icons.png) -170px 0px no-repeat;
+}
+
+a.social.gplus:hover {
+  background: url(/images/social_icons.png) -170px -34px no-repeat;
 }
 
 img.avatar {
