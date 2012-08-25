@@ -16,7 +16,7 @@ author :
   email : stephane.busso@gmail.com
   github : sbusso
   twitter : sbusso
-  feedburner : feedname
+  feedburner : rubynaut
   linkedin: stephanebusso
 
 # The production_url is only used when full-domain names are needed
@@ -84,7 +84,8 @@ JB :
     disqus :
       short_name : rubynaut
     # livefyre :
-    #   site_id : 123
+    #   site_id : 310508
+
     # intensedebate :
     #   account : 123abc
     # facebook :
