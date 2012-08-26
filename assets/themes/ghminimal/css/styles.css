@@ -236,7 +236,8 @@ footer.main {
   width:270px;
   float:left;
   position:fixed;
-  bottom:50px;
+  bottom:30px;
+  padding-top: 15px;
 }
 
 

@@ -40,25 +40,13 @@
         {% include intro %}
 
 
+        <img src="/images/qrcode.png"/>
 
       </header>
       <section class="main">
         {{ content }}
       </section>
-      <aside>
-        <nav>
-          <ul>
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
-        </nav>
-        <ul>
-          <li class="contact"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-        </ul>
 
-        <img src="/images/qrcode.png"/>
-      </aside>
       <footer class="main">
         <p>
           <small>Themed with <a href="http://sdb.github.com/jb-theme-ghminimal/">ghminimal</a> based on <a href="http://github.com/orderedlist/minimal/">minimal</a>.</small>

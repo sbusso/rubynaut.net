@@ -1,0 +1,12 @@
+      <!-- <aside> -->
+      <h2>Pages</h2>
+        <nav>
+          <ul>
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>
+        </nav>
+
+
+      <!-- </aside> -->
