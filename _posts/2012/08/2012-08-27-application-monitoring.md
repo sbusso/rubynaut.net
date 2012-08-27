@@ -1,0 +1,124 @@
+---
+layout: post
+title: "Application Monitoring"
+description: "Monitor your resources and application"
+category:
+tags: [statsd, graphite, monitoring]
+---
+{% include JB/setup %}
+
+## Importance of monitoring
+
+Most websites go production with only monitoring if the website is up, but how many monitor resources, services or application errors, and their trend? Things you should monitor:
+
++ infracstructure resources (cpu usage, memory usage, disk space / node, ...)
++ services (database, mail server, application server, ...)
++ application errors (server errors, caching errors, queries ...)
++ user bahavior (how many attempt to log in, how long user stay on the site, ...)
+
+It's an important point for the quality of a business to monitor a maximum of data but also to keep the information concise with dashboards and alerts. Good news, there are quite a few tools to help. For the one I know:
+
+* simple monitor:[montastic](http://www.montastic.com/), [pingdom](http://www.pingdom.com/)
+* resources and application (commercials): [new relic](http://newrelic.com/), [scout](https://scoutapp.com/), [cloudkit](https://www.cloudkick.com/), [circonus](http://circonus.com/), [server density](http://www.serverdensity.com/)
+* a long list of open source solutions: [munin](http://munin-monitoring.org/), [nagios](http://www.nagios.org/)(alerts), [monit](http://mmonit.com/monit/) (watch pro [episode on railscasts](http://railscasts.com/episodes/375-monit)), [ganglia](http://ganglia.sourceforge.net/), [zabbix](http://www.zabbix.com/), [uptime](http://fzaninotto.github.com/uptime/), [cacti](http://www.cacti.net/) + [RRDTool](http://www.rrdtool.org/) and [even more monitoring solutions](http://en.wikipedia.org/wiki/Comparison_of_network_monitoring_systems).
+* tools to collect general data: [collectd](http://collectd.org/), [statsd](https://github.com/etsy/statsd), [bucky](https://github.com/cloudant/bucky), [amon](http://amon.cx/)
+* user behavior: [intercom](https://www.intercom.io) (free)
+
+## StatsD / Graphite example
+
+This week-end I gave a try to statsd / graphite.
+
+### Architecture
+
+General architecture for monitoring is composed of:
+* a main data storage
+* a daemon to collect the data
+* a dashboard/graphing system
+
+![Statsd/Graphite architecture](/images/posts/stasd_graphite_architecture.png)
+
+### Installation
+
+
+#### Pre-requirements:
+
+* node.js, ruby, python
+* [graphite](http://graphite.wikidot.com/) - Scalable Realtime Graphing: a python framework to display data
+* [statsd](https://github.com/etsy/statsd): a simple daemons to collect data made with node.js
+* [statsd ruby client](https://github.com/github/statsd-ruby)
+
+
+
+
+#### Install graphite
+
+A gist is better than a long speech: [Install Graphite 0.9.10 on Ubuntu 12.04](https://gist.github.com/3112065). **Don't forget to start carbon at the end**.
+
+    cd /opt/graphite/
+    sudo ./bin/carbon-cache.py start
+
+Then test graphite
+
+    graphite/examples$ python ./example-client.py
+
+![Graphite resources graphic](/images/posts/graphite_resources.png)
+
+#### Install statsd
+
+First clone the node.js daemon:
+
+    git clone https://github.com/etsy/statsd
+
+Create a config file from exampleConfig.js and put it somewhere and then start the daemon
+
+    host: "localhost"
+
+    node stats.js exampleConfig.js
+
+Focusing on programming part, [statsd-instrument](https://github.com/Shopify/statsd-instrument) from Shopify.
+
+### Alternative usage
+
+37signals [alternative](http://37signals.com/svn/posts/3091-pssst-your-rails-application-has-a-secret-to-tell-you), but without graphic interface, yet
+
+
+### Other dashboards
+
+
+Dashboard based on graphite (default one is graphite web). I will try some in coming days:
+* [graphiti](https://github.com/paperlesspost/graphiti)
+* [graphene](https://github.com/jondot/graphene)
+* [charcoal](https://github.com/cebailey59/charcoal)
+* [gdash](https://github.com/ripienaar/gdash), [blog post](http://www.devco.net/archives/2011/10/08/gdash-graphite-dashboard.php)
+* [tasseo](https://github.com/obfuscurity/tasseo)
+* [etsy's dashboard](https://github.com/etsy/dashboard)
+* [Rickshaw](http://code.shutterstock.com/rickshaw/)
+* [Descartes](https://github.com/obfuscurity/descartes)
+
+Other solution with [cube](http://square.github.com/cube/)
+* [cubism](http://square.github.com/cubism/) and [crossfilter](http://square.github.com/crossfilter/)
+
+and [Sensu](https://github.com/sensu/sensu) with its list of [plugins](https://github.com/sensu/sensu-community-plugins/tree/master/plugins).
+
+Commercial dashboards:
+* [Geckoboard](http://www.geckoboard.com/)
+* [Docksboard](http://ducksboard.com/)
+* [Leftronic](https://www.leftronic.com/)
+* [Librato Metrics](https://metrics.librato.com/)
+
+### Other way to collect data
+
+Another way to get the data is to import your server logs:
+* [logstash](https://github.com/logstash/logstash)
+* [etsy's logstar](https://github.com/etsy/logster)
+
+Sending data through HTTP/JSON:
+* [backstop](https://github.com/obfuscurity/backstop)
+
+Send notification event from capistrano deploy: [graphite-notify](https://github.com/hellvinz/graphite-notify)
+
+## It's only the beginning
+
+A good background of what you can monitor on a post of Etsy, author of the node.js version of statsd, and few other tools linked here: [Measure Anything, Measure Everything](http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/) and a lot information about graphite from Jason Dixon's blog (at Github, previuously at Heroku and Circonus), [Obfuscurity.](http://obfuscurity.com/Tags/Graphite). With active work of these two people, and others, we can expect more to come in coming months.
+
+
