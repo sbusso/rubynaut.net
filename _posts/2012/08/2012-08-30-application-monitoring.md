@@ -3,13 +3,13 @@ layout: post
 title: "Application Monitoring"
 description: "Monitor your resources and application"
 category:
-tags: [statsd, graphite, monitoring]
+tags: [statsd, graphite, monitoring, ruby]
 ---
 {% include JB/setup %}
 
 ## Importance of monitoring
 
-Most websites go production with only monitoring if the website is up, but how many monitor resources, services or application errors, and their trend? Things you should monitor:
+Most websites go production with only monitoring online availability, but how many monitor resources, services or application errors, and their trend? Things you should monitor:
 
 + infracstructure resources (cpu usage, memory usage, disk space / node, ...)
 + services (database, mail server, application server, ...)
@@ -20,34 +20,32 @@ It's an important point for the quality of a business to monitor a maximum of da
 
 * simple monitor:[montastic](http://www.montastic.com/), [pingdom](http://www.pingdom.com/)
 * resources and application (commercials): [new relic](http://newrelic.com/), [scout](https://scoutapp.com/), [cloudkit](https://www.cloudkick.com/), [circonus](http://circonus.com/), [server density](http://www.serverdensity.com/)
+* user behavior: [intercom](https://www.intercom.io) (free)
 * a long list of open source solutions: [munin](http://munin-monitoring.org/), [nagios](http://www.nagios.org/)(alerts), [monit](http://mmonit.com/monit/) (watch pro [episode on railscasts](http://railscasts.com/episodes/375-monit)), [ganglia](http://ganglia.sourceforge.net/), [zabbix](http://www.zabbix.com/), [uptime](http://fzaninotto.github.com/uptime/), [cacti](http://www.cacti.net/) + [RRDTool](http://www.rrdtool.org/) and [even more monitoring solutions](http://en.wikipedia.org/wiki/Comparison_of_network_monitoring_systems).
 * tools to collect general data: [collectd](http://collectd.org/), [statsd](https://github.com/etsy/statsd), [bucky](https://github.com/cloudant/bucky), [amon](http://amon.cx/)
-* user behavior: [intercom](https://www.intercom.io) (free)
 
 ## StatsD / Graphite example
 
-This week-end I gave a try to statsd / graphite.
+Last week-end I gave a try to statsd / graphite:
+* [graphite](http://graphite.wikidot.com/) - Scalable Realtime Graphing: a python framework to display data
+* [statsd](https://github.com/etsy/statsd): a simple daemons to collect data made with node.js
 
 ### Architecture
 
 General architecture for monitoring is composed of:
-* a main data storage
-* a daemon to collect the data
-* a dashboard/graphing system
+* a main data storage (graphite db)
+* a daemon to collect the data (statsd)
+* graphing system (graphite)
+* a dashboard (graphite web)
 
-![Statsd/Graphite architecture](/images/posts/stasd_graphite_architecture.png)
+![Statsd/Graphite architecture](/images/posts/statsd_graphite_architecture.png)
 
 ### Installation
 
 
 #### Pre-requirements:
 
-* node.js, ruby, python
-* [graphite](http://graphite.wikidot.com/) - Scalable Realtime Graphing: a python framework to display data
-* [statsd](https://github.com/etsy/statsd): a simple daemons to collect data made with node.js
-* [statsd ruby client](https://github.com/github/statsd-ruby)
-
-
+You need to have a server with node.js, ruby, python available.
 
 
 #### Install graphite
@@ -63,6 +61,8 @@ Then test graphite
 
 ![Graphite resources graphic](/images/posts/graphite_resources.png)
 
+So now we have the storage / graphing solution ready, next we need the daemon to collect data.
+
 #### Install statsd
 
 First clone the node.js daemon:
@@ -75,15 +75,30 @@ Create a config file from exampleConfig.js and put it somewhere and then start t
 
     node stats.js exampleConfig.js
 
+It works also, now you can play with some ruby code.
+
+#### The ruby
+
+[statsd ruby client](https://github.com/reinh/statsd)
+    require 'statsd'
+    statsd = Statsd.new 'localhost', 8125
+    statsd = Statsd.new('localhost').tap{|sd| sd.namespace = 'account'}
+    (1..100).each do
+      rand sleep(10)
+      statsd.increment 'activate'
+    end
+
+Example:
+
+![Graphite accounts from statsd-rb](/images/posts/statsd-rb.png)
+
+Let's you have a look to the graphite interface,all data are available and graphing option are numerous (calculation, presentation, aggregation).
+
 Focusing on programming part, [statsd-instrument](https://github.com/Shopify/statsd-instrument) from Shopify.
 
-### Alternative usage
-
-37signals [alternative](http://37signals.com/svn/posts/3091-pssst-your-rails-application-has-a-secret-to-tell-you), but without graphic interface, yet
-
+## Going further
 
 ### Other dashboards
-
 
 Dashboard based on graphite (default one is graphite web). I will try some in coming days:
 * [graphiti](https://github.com/paperlesspost/graphiti)
@@ -117,8 +132,10 @@ Sending data through HTTP/JSON:
 
 Send notification event from capistrano deploy: [graphite-notify](https://github.com/hellvinz/graphite-notify)
 
+### Alternative usage
+
+37signals [alternative](http://37signals.com/svn/posts/3091-pssst-your-rails-application-has-a-secret-to-tell-you), but without graphic interface, yet
+
 ## It's only the beginning
 
-A good background of what you can monitor on a post of Etsy, author of the node.js version of statsd, and few other tools linked here: [Measure Anything, Measure Everything](http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/) and a lot information about graphite from Jason Dixon's blog (at Github, previuously at Heroku and Circonus), [Obfuscurity.](http://obfuscurity.com/Tags/Graphite). With active work of these two people, and others, we can expect more to come in coming months.
-
-
+You will find a good background of what you can monitor on the following a post of Etsy, author of the node.js version of statsd, and few other tools linked: [Measure Anything, Measure Everything](http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/). Also a lot information about graphite at Jason Dixon's blog (at Github, previuously at Heroku and Circonus), [Obfuscurity.](http://obfuscurity.com/Tags/Graphite). With active work of these two people, and others, we can expect more to come in coming months. Now you can monitor, watch and follow any metric of your business, there is no excuse not to do it and a lot to gain.

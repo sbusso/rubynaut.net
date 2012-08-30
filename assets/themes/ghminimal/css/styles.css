@@ -105,7 +105,17 @@ th {
 }
 
 img {
+
   max-width:100%;
+  padding: 4px;
+  border: #e5e5e5 solid 1px;
+}
+
+.post img {
+  display: block;
+  text-align: center;
+  margin: 0px auto;
+
 }
 
 header.main {
@@ -456,9 +466,16 @@ a.social.gplus:hover {
 img.avatar {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+
+  padding: 0px;
   border-radius: 4px;
   width: 34px;
   height: 34px;
   margin-bottom: -5px;
   margin-right: 3px;
+
+}
+
+img.code {
+  float: left;
 }
