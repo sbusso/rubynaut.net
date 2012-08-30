@@ -11,7 +11,7 @@ description: ""
 </center>
 Web Entrepreneur, Rails developer since early versions. Programming addict since school. Full stack aware with a wide range of technical skills and business oriented. I will bring you more than just coding. I'm solution finder and implied in your projects.
 
-I like to work on inovative project, analyse ideas and build solutions. Available as a developer, lead developer or consultant. I've been ScrumMaster for 3 years and ambrace agility.
+I like to work on inovative project, analyse ideas and build solutions. Available as a developer, lead developer or consultant. I've been ScrumMaster for 3 years and embrace agility.
 
 * Your business is to bring a commercial product to market,
 * you think _Lean_ Startup, not Twitter or Facebook,
