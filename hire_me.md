@@ -15,7 +15,7 @@ I like to work on inovative project, analyse ideas and build solutions. Availabl
 
 * Your business is to bring a commercial product to market,
 * you think _Lean_ Startup, not Twitter or Facebook,
-* small team, also I’m fine being the one developer,
+* small team, also I’m fine being the only developer,
 * remote worker is not a problem for you,
 * I do server side development using Ruby on Rails,
 * and client side development using JavaScript.

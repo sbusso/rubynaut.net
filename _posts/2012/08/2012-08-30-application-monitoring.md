@@ -89,7 +89,7 @@ Then use this script to create some data:
     statsd = Statsd.new 'localhost', 8125
     statsd = Statsd.new('localhost').tap{|sd| sd.namespace = 'account'}
     (1..100).each do
-      rand sleep(10)
+      sleep rand(10)
       statsd.increment 'activate'
     end
 
@@ -99,7 +99,7 @@ Result:
 
 You can now have a look to the graphite interface, all data are available and graphing option are numerous (calculation, presentation, aggregation).
 
-Also Shopify has shared is [statsd-instrument](https://github.com/Shopify/statsd-instrument), a meta client to send data from your code.
+Also Shopify has shared is [statsd-instrument](https://github.com/Shopify/statsd-instrument), a meta client to send data from your code and 37signals has shown its [alternative](http://37signals.com/svn/posts/3091-pssst-your-rails-application-has-a-secret-to-tell-you), but without available graphic interface, yet.
 
 ## Going further
 
@@ -128,21 +128,17 @@ If you don't want to bother with all the setup and technical maintenance, you ca
 
 ### Other way to collect data
 
-Different interaces exists and allow you to send data to the DB, here from logs:
+Several interfaces exist and allow you to send data to the storage, here from logs:
 * [logstash](https://github.com/logstash/logstash)
 * [etsy's logstar](https://github.com/etsy/logster)
 
 and this one for sending data through HTTP/JSON:
 * [backstop](https://github.com/obfuscurity/backstop)
 
-Finally if you want to notify your DB of a deployment event: [graphite-notify](https://github.com/hellvinz/graphite-notify)
-
-### Alternative usage
-
-37signals [alternative](http://37signals.com/svn/posts/3091-pssst-your-rails-application-has-a-secret-to-tell-you), but without graphic interface, yet
+Finally if you want to notify a deployment event: [graphite-notify](https://github.com/hellvinz/graphite-notify)
 
 ## It's only the beginning
 
-You will find a good background of what you can monitor on the following a post of Etsy, author of the node.js version of statsd, and few other tools linked: [Measure Anything, Measure Everything](http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/). Also a lot information about graphite at Jason Dixon's blog (at Github, previuously at Heroku and Circonus), [Obfuscurity.](http://obfuscurity.com/Tags/Graphite). With active work of these two people, and others, we can expect more to come in coming months.
+You will find a good overview of what you can monitor on the following post of Etsy, author of the node.js version of statsd, and few other tools linked: [Measure Anything, Measure Everything](http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/). Also a lot information about graphite at Jason Dixon's blog (at Github, previuously at Heroku and Circonus), [Obfuscurity.](http://obfuscurity.com/Tags/Graphite). With active work of these two people, and others, we can expect more to come in coming months.
 
 Now you can monitor, watch and follow any metric of your business, there is no excuse not to do it and a lot to gain.
