@@ -142,3 +142,5 @@ Finally if you want to notify a deployment event: [graphite-notify](https://gith
 You will find a good overview of what you can monitor on the following post of Etsy, author of the node.js version of statsd, and few other tools linked: [Measure Anything, Measure Everything](http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/). Also a lot information about graphite at Jason Dixon's blog (at Github, previuously at Heroku and Circonus), [Obfuscurity.](http://obfuscurity.com/Tags/Graphite). With active work of these two people, and others, we can expect more to come in coming months.
 
 Now you can monitor, watch and follow any metric of your business, there is no excuse not to do it and a lot to gain.
+
+<div class="BXKFNKYFPP69"></div>
