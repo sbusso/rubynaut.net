@@ -95,7 +95,7 @@ Then use this script to create some data:
 
 Result:
 
-![Graphite accounts from statsd-rb]({{site.BASE_PATH}}/images/posts/statsd-rb.png)
+![Graphite accounts from statsd-rb - bp]({{site.BASE_PATH}}/images/posts/statsd-rb.png)
 
 You can now have a look to the graphite interface, all data are available and graphing option are numerous (calculation, presentation, aggregation).
 
