@@ -7,7 +7,8 @@ tags: [monitoring]
 ---
 {% include JB/setup %}
 
-Completing the [Monitoring Application post](), some companies go a bit further, offering a public dashboard to their users to check the status of their services. So monitoring is not only about private information, it's also about communication to your customers. Some examples:
+Completing the [Monitoring Application post](http://rubynaut.net/2012/08/30/application-monitoring), some companies go a bit further, offering a public dashboard to their users to check the status of their services. So monitoring is not only about private information, it's also about communication to your customers. Some examples:
+* [Github](https://status.github.com/)
 * [Disqus](http://status.disqus.com/)
 * [heroku](https://status.heroku.com/)
 * [Diablo III](http://us.battle.net/d3/en/status)
