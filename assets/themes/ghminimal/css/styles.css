@@ -479,3 +479,11 @@ img.avatar {
 img.code {
   float: left;
 }
+
+.social {
+  margin-right: -30px;
+}
+
+.twitter-share-button {
+  margin-right: -20px;
+}

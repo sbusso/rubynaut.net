@@ -31,7 +31,7 @@ author :
 production_url : http://rubynaut.net
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
-BASE_PATH : http://rubynaut.net
+
 JB :
   version : 0.2.13
 

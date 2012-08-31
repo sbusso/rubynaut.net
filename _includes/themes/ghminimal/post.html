@@ -1,16 +1,22 @@
 <article class="post">
-	<header>
-		<h1>{{ page.title }}</h1>
-		<p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-			{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }}
-		</time></p>
-	</header>
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p>
+    Published on <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+      {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }}
+    </time>
+    </p>
+    <p class="social">    <a href="https://twitter.com/share" class="twitter-share-button" data-via="sbusso">Tweet</a>
 
-	{{ content }}
 
-	<footer>
+    <g:plusone size="medium"></g:plusone></p>
+  </header>
+
+  {{ content }}
+
+  <footer>
     <section>
-  		{% unless page.tags == empty %}
+      {% unless page.tags == empty %}
         <h1>Tags:</h1>
         <ul>
         {% assign tags_list = page.tags %}
@@ -32,7 +38,15 @@
     <p class="gotop">
       <a href="#page">Back to Top</a>
     </p>
-	</footer>
+  </footer>
 
-	{% include JB/comments %}
+  {% include JB/comments %}
 </article>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
