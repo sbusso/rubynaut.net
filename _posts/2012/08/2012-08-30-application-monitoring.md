@@ -38,7 +38,7 @@ General architecture for monitoring is composed of:
 * graphing system (graphite)
 * a dashboard (graphite web)
 
-![Statsd/Graphite architecture]({{ ASSET_PATH }}/images/posts/statsd_graphite_architecture.png)
+![Statsd/Graphite architecture]({{ BASE_PATH }}/images/posts/statsd_graphite_architecture.png)
 
 ### Installation
 
@@ -59,7 +59,7 @@ Then test graphite
 
     graphite/examples$ python ./example-client.py
 
-![Graphite resources graphic]({{ ASSET_PATH }}/images/posts/graphite_resources.png)
+![Graphite resources graphic]({{ BASE_PATH }}/images/posts/graphite_resources.png)
 
 So now we have the storage / graphing solution ready, next we need the daemon to collect data.
 
@@ -95,7 +95,7 @@ Then use this script to create some data:
 
 Result:
 
-![Graphite accounts from statsd-rb - bp]({{ ASSET_PATH }}/images/posts/statsd-rb.png)
+![Graphite accounts from statsd-rb]({{ BASE_PATH }}/images/posts/statsd-rb.png)
 
 You can now have a look to the graphite interface, all data are available and graphing option are numerous (calculation, presentation, aggregation).
 
