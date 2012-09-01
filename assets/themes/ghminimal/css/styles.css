@@ -301,7 +301,7 @@ article footer {
   text-align: right;
 }
 
-article.post footer h1 {
+article.post footer h2 {
   font-weight: normal;
   display: inline;
   font-size: inherit;

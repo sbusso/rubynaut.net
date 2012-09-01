@@ -24,6 +24,8 @@ It's an important point for the quality of a business to monitor a maximum of da
 * a long list of open source solutions: [munin](http://munin-monitoring.org/), [nagios](http://www.nagios.org/)(alerts), [monit](http://mmonit.com/monit/) (watch pro [episode on railscasts](http://railscasts.com/episodes/375-monit)), [ganglia](http://ganglia.sourceforge.net/), [zabbix](http://www.zabbix.com/), [uptime](http://fzaninotto.github.com/uptime/), [cacti](http://www.cacti.net/) + [RRDTool](http://www.rrdtool.org/) and [even more monitoring solutions](http://en.wikipedia.org/wiki/Comparison_of_network_monitoring_systems).
 * tools to collect general data: [collectd](http://collectd.org/), [statsd](https://github.com/etsy/statsd), [bucky](https://github.com/cloudant/bucky), [amon](http://amon.cx/)
 
+Update 31/08/2012 [shinken](http://www.shinken-monitoring.org/)
+
 ## StatsD / Graphite example
 
 Last week-end I gave a try to statsd / graphite:
@@ -142,5 +144,7 @@ Finally if you want to notify a deployment event: [graphite-notify](https://gith
 You will find a good overview of what you can monitor on the following post of Etsy, author of the node.js version of statsd, and few other tools linked: [Measure Anything, Measure Everything](http://codeascraft.etsy.com/2011/02/15/measure-anything-measure-everything/). Also a lot information about graphite at Jason Dixon's blog (at Github, previuously at Heroku and Circonus), [Obfuscurity.](http://obfuscurity.com/Tags/Graphite). With active work of these two people, and others, we can expect more to come in coming months.
 
 Now you can monitor, watch and follow any metric of your business, there is no excuse not to do it and a lot to gain.
+
+**UPDATE: extension blogs [From monitoring to public status](http://rubynaut.net/2012/08/31/from-monitoring-to-public-status/)**
 
 <div class="BXKFNKYFPP69"></div>

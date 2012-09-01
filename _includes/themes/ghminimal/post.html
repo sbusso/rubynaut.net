@@ -17,7 +17,7 @@
   <footer>
     <section>
       {% unless page.tags == empty %}
-        <h1>Tags:</h1>
+        <h2>Tags:</h2>
         <ul>
         {% assign tags_list = page.tags %}
         {% include JB/tags_list %}
@@ -27,7 +27,7 @@
 
     <section>
       {% unless page.categories == empty %}
-        <h1>Categories:</h1>
+        <h2>Categories:</h2>
         <ul>
         {% assign categories_list = page.categories %}
         {% include JB/categories_list %}
@@ -35,10 +35,21 @@
       {% endunless %}
     </section>
 
+
+  </footer>
+<section>
+<h2>Some, maybe, related posts</h2>
+
+
+  <ul>
+  {% for post in site.related_posts limit:3 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+</section>
     <p class="gotop">
       <a href="#page">Back to Top</a>
     </p>
-  </footer>
 
   {% include JB/comments %}
 </article>

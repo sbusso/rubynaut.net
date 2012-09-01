@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "from monitoring to public status"
+title: "From monitoring to public status"
 description: "examples of public status page for websites"
 category:
 tags: [monitoring]
