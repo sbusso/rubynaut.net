@@ -1,15 +1,24 @@
 <article class="post">
   <header>
     <h1>{{ page.title }}</h1>
-    <p>
-    Published on <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-      {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }}
-    </time>
-    </p>
-    <p class="social">    <a href="https://twitter.com/share" class="twitter-share-button" data-via="sbusso">Tweet</a>
 
 
-    <g:plusone size="medium"></g:plusone></p>
+    <div class="subinfo">
+      <div class="dzone"><script language="javascript" src="http://widgets.dzone.com/links/widgets/zoneit.js"></script></div>
+      <p>
+      Published on <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+        {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }}
+      </time>
+      </p>
+      <p class="social">    <a href="https://twitter.com/share" class="twitter-share-button" data-via="sbusso">Tweet</a>
+
+
+      <g:plusone size="medium"></g:plusone></p>
+    </div>
+
+
+
+
   </header>
 
   {{ content }}

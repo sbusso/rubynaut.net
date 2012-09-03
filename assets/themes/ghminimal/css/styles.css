@@ -480,8 +480,25 @@ img.code {
   float: left;
 }
 
+.dzone {
+  display: block;
+  float: left;
+
+
+}
+
+.subinfo {
+  display:block;
+  width: 220px;
+  float:  right;
+  clear: both;
+  height: 83px;
+
+}
 .social {
+  display: block;
   margin-right: -30px;
+
 }
 
 .twitter-share-button {
