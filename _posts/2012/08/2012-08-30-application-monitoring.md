@@ -147,4 +147,6 @@ Now you can monitor, watch and follow any metric of your business, there is no e
 
 **UPDATE: extension blogs [From monitoring to public status](http://rubynaut.net/2012/08/31/from-monitoring-to-public-status/)**
 
+**UPDATE (06/09/2012): Another for monitoring some metrics is shown with the [railscast 378](http://railscasts.com/episodes/378-fnordmetric) using [fnordmetric](https://github.com/paulasmuth/fnordmetric). Must see
+
 <div class="BXKFNKYFPP69"></div>
