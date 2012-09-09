@@ -149,4 +149,8 @@ Now you can monitor, watch and follow any metric of your business, there is no e
 
 **UPDATE (06/09/2012): Another for monitoring some metrics is shown with the [railscast 378](http://railscasts.com/episodes/378-fnordmetric) using [fnordmetric](https://github.com/paulasmuth/fnordmetric). Must see
 
+**UPDATE (08/09/2012) Interesting post from Github about monitoring responsiveness: [How we keep github fast](https://github.com/blog/1252-how-we-keep-github-fast)**
+
+**UPDATE (09/09/2012) Video about [Monitoring and metrics at Travis](http://www.eventials.com/rubyconfbr2012/recorded/M2UzZTJkMzY2MzdiNTg2NTUxNWM1MzI3NWY1YjRhMzYjIzEyOTc_3D)**
+
 <div class="BXKFNKYFPP69"></div>
