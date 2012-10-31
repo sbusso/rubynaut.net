@@ -153,4 +153,7 @@ Now you can monitor, watch and follow any metric of your business, there is no e
 
 **UPDATE (09/09/2012) Video about [Monitoring and metrics at Travis](http://www.eventials.com/rubyconfbr2012/recorded/M2UzZTJkMzY2MzdiNTg2NTUxNWM1MzI3NWY1YjRhMzYjIzEyOTc_3D) and refer to [Metricks](https://github.com/eric/metriks)**
 
+**UPDATE (31/10/2012) Shopify has released its homemage dashboard, have alook [Dashing](http://shopify.github.com/dashing/)**
+
+
 <div class="BXKFNKYFPP69"></div>
