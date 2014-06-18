@@ -1,15 +1,42 @@
 <h2>Projects</h2>
 
+<p><a href='http://www.pronostic-facile.fr/'>Pronostic Facile</a>: Innovative horse racing information with graphical tools. Commercial website since 2007.</p>
+<ul>
+  <li>Ruby on Rails</li>
+  <li>JQuery</li>
+  <li>PostgreSQL</li>
+  <li>Redis</li>
+  <li>Nginx, HAProxy</li>
+  <li>Postifx</li>
+</ul>
+
+<p><a href='http://mailbang.com/'>MailBang</a>: Mailing has never beenso easy. A simple composing tool to create you mailings and automatically taking care of everything else.</p>
+<ul>
+  <li>Ruby on Rails</li>
+  <li>AngularJS</li>
+  <li>PostgreSQL</li>
+  <li>Redis</li>
+</ul>
+  
+
 <p>
   <a href="http://copysniper.biz">CopySniper</a>, Copywriting tool producing sales and squeeze pages including High Value copies.
 </p>
+<ul>
+  <li>Ruby on Rails</li>
+  <li>AngularJS</li>
+  <li>PostgreSQL</li>
+  <li>Redis</li>
+</ul>
 
-<p><a href='http://www.pronostic-facile.fr/'>Pronostic Facile</a>: Innovative horse racing information with graphical tools. Commercial website since 2007.</p>
 
-<p><a href='http://mailbang.com/'>MailBang</a>: Mailing has never beenso easy. A simple composing tool to create you mailings and automatically taking care of everything else.</p>
 
 <p><a href='http://rankobserver.com/'>RankObserver</a>: Follow your ranking scores and competitors.</p>
+  <ul>
+  <li>Ruby on Rails</li>
+  <li>JQuery</li>
+  <li>PostgreSQL</li>
+  <li>Redis</li>
+  </ul>
 
-<p><a href='http://github-watcher.herokuapp.com/'>Github Watcher</a>: Missing feature of Github, follow and manage your stared repositories.</p>
-
-<p><a href='http://blogsummaries.com/'>Blog Summaries</a>: Save a lot of time by getting daily summaries of your favorite blogs.</p>
+  
